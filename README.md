@@ -13,6 +13,6 @@ Lorsque vous entrez dans l’application serveur, vous avez la possibilité d’
 ![Client](Images/serveur.png)
 
 
-## Je remercie mes collegues qui ont contribue a la reussite de cette application :
+## Je remercie mes collègues qui ont contribué a la réussite de cette application :
 - Laurendeau Maxim
 - Simard Samuel
