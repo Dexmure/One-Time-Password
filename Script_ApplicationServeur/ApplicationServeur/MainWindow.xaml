@@ -1,0 +1,83 @@
+﻿<Window x:Class="ApplicationServeur.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        Title="Vérification Jeton" Height="400" Width="500">
+    <Grid Background="#f0f0f0">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <!-- Message d'instruction -->
+            <TextBlock Text="Veuillez entrer votre jeton :" 
+                       FontSize="22" FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       Foreground="#333"/>
+
+            <!-- Conteneur pour les champs de saisie -->
+            <Border BorderBrush="Gray" BorderThickness="2" Padding="10" CornerRadius="10">
+                <UniformGrid Columns="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBox x:Name="Code1" MaxLength="1" Width="40" Height="50" FontSize="26" 
+                             TextAlignment="Center" KeyUp="Code_KeyUp"/>
+                    <TextBox x:Name="Code2" MaxLength="1" Width="40" Height="50" FontSize="26" 
+                             TextAlignment="Center" KeyUp="Code_KeyUp"/>
+                    <TextBox x:Name="Code3" MaxLength="1" Width="40" Height="50" FontSize="26" 
+                             TextAlignment="Center" KeyUp="Code_KeyUp"/>
+                    <TextBox x:Name="Code4" MaxLength="1" Width="40" Height="50" FontSize="26" 
+                             TextAlignment="Center" KeyUp="Code_KeyUp"/>
+                    <TextBox x:Name="Code5" MaxLength="1" Width="40" Height="50" FontSize="26" 
+                             TextAlignment="Center" KeyUp="Code_KeyUp"/>
+                    <TextBox x:Name="Code6" MaxLength="1" Width="40" Height="50" FontSize="26" 
+                             TextAlignment="Center" KeyUp="Code_KeyUp"/>
+                    <TextBox x:Name="Code7" MaxLength="1" Width="40" Height="50" FontSize="26" 
+                             TextAlignment="Center" KeyUp="Code_KeyUp"/>
+                    <TextBox x:Name="Code8" MaxLength="1" Width="40" Height="50" FontSize="26" 
+                             TextAlignment="Center" KeyUp="Code_KeyUp"/>
+                </UniformGrid>
+            </Border>
+
+            <!-- Bouton de nettoyage des champs -->
+            <Button Content="Effacer" Click="Nettoyer_Click"
+                    Width="150" Height="45"
+                    FontSize="18" FontWeight="Bold"
+                    Background="RoyalBlue" Foreground="White"
+                    BorderThickness="0" Cursor="Hand"
+                    HorizontalAlignment="Center" Margin="0,10,0,0"/>
+
+            <!-- Message de validation -->
+            <TextBlock x:Name="messageValidation" Text="" 
+                       FontSize="20" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Foreground="Red"/>
+
+            <!-- Nombre d'essais restants -->
+            <Grid HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Nombre d'essais restants:" FontSize="18" Grid.Column="0"/>
+                <TextBlock x:Name="nombreEssaie" Text="5" FontSize="18" FontWeight="Bold" Foreground="Red"
+               Grid.Column="1" Margin="10,0,0,0"/>
+            </Grid>
+
+            <!-- Bouton de vérification -->
+            <Button Content="Vérifier" Click="VerifierCode_Click"
+                    Width="150" Height="45"
+                    FontSize="18" FontWeight="Bold"
+                    Background="RoyalBlue" Foreground="White"
+                    BorderThickness="0" Cursor="Hand"
+                    HorizontalAlignment="Center"/>
+
+            <Grid HorizontalAlignment="Center" Margin="10,30,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Ancien jeton:" x:Name="AncienJetonText" FontSize="18" Grid.Column="0" Visibility="Hidden"/>
+                <TextBlock x:Name="AncienJeton" Text="" FontSize="18" FontWeight="Bold" Foreground="Red" Visibility="Hidden"
+                           Grid.Column="1" Margin="10,0,0,0"/>
+            </Grid>
+
+        </StackPanel>
+    </Grid>
+</Window>

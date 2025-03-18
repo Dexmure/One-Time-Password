@@ -1,0 +1,45 @@
+<Window x:Class="ApplicationClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApplicationClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <TextBlock  Text="Votre jeton" FontSize="20" HorizontalAlignment="Center" Margin="10,10,10,40"/>
+
+        <Border BorderBrush="#AAAAAA" BorderThickness="1.5" CornerRadius="10" Padding="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <!-- Colonne OTP -->
+                    <ColumnDefinition Width="Auto"/>
+                    <!--Colonne bouton Cpier-->
+                </Grid.ColumnDefinitions>
+
+                <!-- Zone OTP -->
+                <TextBlock x:Name="jeton" Text="00000000" FontSize="24" FontWeight="Bold"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Padding="15,5,15,5" Foreground="Black"/>
+
+                <!-- Bouton Copier aligné à droite -->
+                <Button Content="📋 Copier" Width="90"
+                    Click="CopyOTP" Background="#0078D7" Foreground="White"
+                    FontWeight="Bold" Margin="0,258,0,108" BorderThickness="0" HorizontalAlignment="Center"/>
+            </Grid>
+
+        </Border>
+
+        <!-- InfoBar pour afficher la notification de copie -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,121,0,0">
+            <Border Background="#DFF0D8" Padding="5" CornerRadius="5" Visibility="Collapsed"  x:Name="notifBar">
+                <TextBlock Text="Le Jeton été bien copié !" Foreground="Green" FontWeight="Bold"/>
+            </Border>
+        </StackPanel> 
+
+        <TextBlock x:Name="tictac" Text="Temps restant : 30s" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
+
+    </Grid>
+</Window>

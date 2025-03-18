@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rNZ+gOp6Z8I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mouhm\\OneDrive\\Bureau\\One Time Password (OTP)\\One-Time-Password\\Script_ApplicationClient\\ApplicationClient\\ApplicationClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mouhm\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.2\\microsoft.net.illink.tasks.9.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
